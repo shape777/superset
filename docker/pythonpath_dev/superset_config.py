@@ -113,7 +113,7 @@ try:
 except ImportError:
     logger.info("Using default Docker config...")
 
-AUTH_TYPE = AUTH_LDAP
+#AUTH_TYPE = AUTH_LDAP
 AUTH_USER_REGISTRATION = True
 AUTH_USER_REGISTRATION_ROLE = "Public"
 AUTH_LDAP_UID_FIELD="sAMAccountName"
