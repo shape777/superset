@@ -112,3 +112,23 @@ try:
     )
 except ImportError:
     logger.info("Using default Docker config...")
+
+AUTH_TYPE = AUTH_LDAP
+AUTH_USER_REGISTRATION = True
+AUTH_USER_REGISTRATION_ROLE = "Public"
+AUTH_LDAP_UID_FIELD="sAMAccountName"
+AUTH_LDAP_FIRSTNAME_FIELD="givenName"
+AUTH_LDAP_LASTTNAME_FIELD="sn"
+AUTH_LDAP_SERVER = "ldap://172.16.12.53:389"
+AUTH_LDAP_SEARCH = "OU=Users,OU=Ver.01,DC=ivkh,DC=ee"
+AUTH_LDAP_BIND_USER = "cn=shd_ad_service,OU=Service Accounts,OU=Users,OU=Ver.01,DC=ivkh,DC=ee"
+AUTH_LDAP_BIND_PASSWORD = "i3afXea7GssYcqR3"
+AUTH_LDAP_USE_TLS = False
+
+#MAIL_SERVER = 'vsrv-exch-02.ivkh.ee'
+#MAIL_USE_TLS = False
+#MAIL_USERNAME = 'dmitri.kislitsin@ivkh.ee'
+#MAIL_PASSWORD = ''
+#MAIL_DEFAULT_SENDER = 'dmitri.kislitsin@ivkh.ee'
+
+ENABLE_PROXY_FIX = True
